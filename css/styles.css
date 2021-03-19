@@ -1,0 +1,375 @@
+:root {
+  --main-text-color: #757575;
+  --title-text-color: #212121;
+  --accent-text-color: #2196f3;
+  --accent-buton-color: #188ce8;
+  --filter-button-color: #f5f4fa;
+  --dark-bg-color: #2f303a;
+  --logo-dark-color: #000000;
+  --main-title-color: #ffffff;
+  --light_bg-color: #f5f4fa;
+}
+
+html {
+  box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--main-text-color);
+  background-color: var(--main-title-color);
+}
+
+address {
+  font-style: normal;
+}
+
+.link {
+  text-decoration: none;
+  font-weight: 500;
+  line-height: 1.14;
+  color: var(--title-text-color);
+}
+
+.current,
+.link:hover,
+.link:focus {
+  color: var(--accent-text-color);
+}
+
+.list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.title {
+  font-weight: 700;
+  color: var(--title-text-color);
+}
+
+.button {
+  display: inline-block;
+  padding: 6px 22px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  cursor: pointer;
+  min-width: 73px;
+}
+
+h1,
+h2,
+h3,
+ul,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.section {
+  padding-bottom: 94px;
+  padding-top: 94px;
+}
+
+.container {
+  outline: 1px solid var(--dark-bg-color);
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Шапка */
+.page-header {
+  height: 80px;
+  border-bottom: 1px solid #ececec;
+}
+
+.page-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.navigation-menu {
+  display: flex;
+  align-items: center;
+}
+.header-links {
+  display: flex;
+  align-items: center;
+  margin-left: -50px;
+}
+.header-contacts {
+  display: flex;
+  align-items: center;
+}
+
+.header-list-item {
+  margin-left: 50px;
+}
+
+.header-list-item:first-child,
+.about-us-list-item:first-child,
+.team-member:first-child {
+  margin-left: 0;
+}
+
+.page-header .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.logo {
+  display: inline-block;
+  font-family: 'Raleway', sans-serif;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.38;
+  margin-right: 93px;
+}
+
+.logo-web {
+  color: var(--accent-text-color);
+}
+
+.logo-studio {
+  color: var(--logo-dark-color);
+}
+
+.contact-link {
+  color: var(--main-text-color);
+}
+/* Герой */
+.hero {
+  padding-top: 200px;
+  padding-left: 0;
+  padding-bottom: 200px;
+  padding-right: 0;
+  background-color: var(--dark-bg-color);
+  text-align: center;
+}
+
+.hero .container {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.main-title {
+  margin-bottom: 30px;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  color: var(--main-title-color);
+}
+
+.main-button {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  text-align: center;
+  letter-spacing: 0.06em;
+  background-color: var(--accent-text-color);
+  color: var(--main-title-color);
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  padding: 10px 32px;
+}
+
+.main-button:focus,
+.main-button:hover {
+  outline-style: none;
+  background-color: var(--accent-buton-color);
+}
+
+.section-title {
+  margin-bottom: 50px;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+
+.list-title {
+  font-size: 14px;
+  line-height: 1.17;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+/* Приемущества */
+.advantages-list {
+  display: flex;
+}
+
+.advantages-item {
+  margin-left: 30px;
+}
+
+.advantages-item:first-child {
+  margin-left: 0;
+}
+/* Чем мы занимаемся */
+.about-us {
+  padding-top: 0;
+}
+
+.about-us .container {
+  padding-top: 0px;
+}
+
+.about-us-list {
+  display: flex;
+}
+.about-us-list-item {
+  margin-left: 30px;
+}
+/* Наша команда */
+.our-team {
+  background-color: var(--light_bg-color);
+}
+
+.team {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  line-height: 1.187;
+  text-align: center;
+}
+
+.team-member {
+  margin-left: 30px;
+  width: 270px;
+  height: 368px;
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team-member-info {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.our-team-member {
+  padding-bottom: 10px;
+  font-weight: 500;
+  color: #212121;
+}
+/* Футер */
+.footer-section {
+  background-color: var(--dark-bg-color);
+}
+
+.footer-section .container {
+  outline: 1px solid red;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.logo-studio-footer,
+.our-address {
+  color: var(--main-title-color);
+}
+.link-footer {
+  color: rgba(255, 255, 255, 0.6);
+}
+/* Портфолио */
+.filter {
+  background-color: var(--filter-button-color);
+  border: none;
+  border-radius: 4px;
+}
+
+.filter:hover,
+.filter:active,
+.filter:focus {
+  outline-style: none;
+  background-color: var(--accent-text-color);
+  color: var(--main-title-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.portfolio-item-title {
+  background: #ffffff;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  padding: 20px 24px;
+}
+
+.list-item-title {
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+/* здесь не применяется font-weight:normal дефолтом (не могу найти почему) */
+.list-item {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.87;
+  color: var(--main-text-color);
+}
+
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 50px;
+  margin-left: -30px;
+  margin-bottom: -30px;
+}
+
+.portfolio-item {
+  margin-left: 30px;
+  margin-bottom: 30px;
+  background: #ffffff;
+  flex-basis: calc((100% - 30px * 3) / 3);
+}
+
+.list-button {
+  display: flex;
+  justify-content: center;
+}
+
+.list-button-item {
+  margin-right: 8px;
+}
+
+.list-button-item:last-child {
+  margin-right: 0;
+}
+
+.footer-section .logo {
+  display: block;
+  margin-bottom: 20px;
+}
