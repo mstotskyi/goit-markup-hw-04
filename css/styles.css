@@ -88,7 +88,7 @@ img {
 }
 
 .container {
-  outline: 1px solid var(--dark-bg-color);
+  outline: 1px solid red;
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
@@ -302,6 +302,8 @@ img {
   color: var(--main-title-color);
 }
 .link-footer {
+  display: block;
+  padding-top: 9px;
   color: rgba(255, 255, 255, 0.6);
 }
 /* Портфолио */
