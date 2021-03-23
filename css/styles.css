@@ -88,7 +88,6 @@ img {
 }
 
 .container {
-  outline: 1px solid red;
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
@@ -129,7 +128,10 @@ img {
 
 .header-list-item:first-child,
 .about-us-list-item:first-child,
-.team-member:first-child {
+.team-member:first-child,
+.regular-customers .list-item:first-child,
+.social .list-item:first-child,
+.advantages-item:first-child {
   margin-left: 0;
 }
 
@@ -160,19 +162,50 @@ img {
 .contact-link {
   color: var(--main-text-color);
 }
+.header-list-item .contact-link {
+  display: inline-flex;
+  align-items: center;
+}
+
+.header-list-item .mail::before {
+  content: '';
+  margin-right: 10px;
+  width: 16px;
+  height: 12px;
+  background-image: url(../css/img/envelope.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.header-list-item .phone::before {
+  content: '';
+  margin-right: 10px;
+
+  width: 10px;
+  height: 16px;
+  background-image: url(../css/img/smartphone.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
 /* Герой */
 .hero {
-  padding-top: 200px;
   padding-left: 0;
-  padding-bottom: 200px;
   padding-right: 0;
-  background-color: var(--dark-bg-color);
   text-align: center;
+  max-width: 1600px;
+  height: 600px;
+  background-color: var(--dark-bg-color);
+  margin-right: auto;
+  margin-left: auto;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../css/img/hero.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .hero .container {
-  padding-top: 0;
-  padding-bottom: 0;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 .main-title {
@@ -235,9 +268,34 @@ img {
 .advantages-item {
   margin-left: 30px;
 }
+.advantages-item .list-title {
+  padding-top: 30px;
+}
 
 .advantages-item:first-child {
   margin-left: 0;
+}
+
+.advantages-item::before {
+  display: block;
+  content: '';
+  height: 120px;
+  background-color: var(--light_bg-color);
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 4px;
+}
+.icon-antena::before {
+  background-image: url(../css/img/antenna_1.svg);
+}
+.icon-clock::before {
+  background-image: url(../css/img/clock_1.svg);
+}
+.icon-diagram::before {
+  background-image: url(../css/img/diagram_1.svg);
+}
+.icon-astronaut::before {
+  background-image: url(../css/img/astronaut_1.svg);
 }
 /* Чем мы занимаемся */
 .about-us {
@@ -286,13 +344,30 @@ img {
   font-weight: 500;
   color: #212121;
 }
+
+/* Постоянные клиенты */
+.regular-customers .list {
+  display: flex;
+}
+.regular-customers .list-item {
+  display: block;
+  margin-left: 30px;
+  height: 90px;
+  border: 1px solid #afb1b8;
+  box-sizing: border-box;
+  border-radius: 4px;
+  flex-basis: calc((100% - 150px) / 6);
+}
 /* Футер */
 .footer-section {
   background-color: var(--dark-bg-color);
 }
+.footer-section .logo {
+  display: block;
+  margin-bottom: 20px;
+}
 
 .footer-section .container {
-  outline: 1px solid red;
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -306,6 +381,68 @@ img {
   padding-top: 9px;
   color: rgba(255, 255, 255, 0.6);
 }
+
+.footer-blocks {
+  display: flex;
+}
+.social-title {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: var(--main-title-color);
+}
+
+.social .list {
+  display: flex;
+}
+
+.social .list-item {
+  margin-left: 10px;
+}
+
+.social .link {
+  display: block;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  background-color: rgba(255, 255, 255, 0.1);
+  flex-basis: calc((100% - 30px) / 3);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.social .instagram {
+  background-image: url(../css/img/instagram_light.svg);
+}
+.social .twitter {
+  background-image: url(../css/img/twitter_light.svg);
+}
+
+.social .facebook {
+  background-image: url(../css/img/facebook_light.svg);
+}
+
+.social .linkedin {
+  background-image: url(../css/img/linkedin_light.svg);
+}
+
+.social .link:focus,
+.social .link:hover {
+  background-color: var(--accent-text-color);
+}
+
+.social-links {
+  display: block;
+  padding: 12px;
+}
+.social {
+  margin-left: 70px;
+}
+
 /* Портфолио */
 .filter {
   background-color: var(--filter-button-color);
@@ -322,6 +459,19 @@ img {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
+.list-button {
+  display: flex;
+  justify-content: center;
+}
+
+.list-button-item {
+  margin-right: 8px;
+}
+
+.list-button-item:last-child {
+  margin-right: 0;
+}
+
 .portfolio-item-title {
   background: #ffffff;
   border-right: 1px solid #eeeeee;
@@ -336,7 +486,7 @@ img {
   letter-spacing: 0.06em;
 }
 /* здесь не применяется font-weight:normal дефолтом (не могу найти почему) */
-.list-item {
+.portfolio-list .list-item {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.87;
@@ -347,31 +497,27 @@ img {
   display: flex;
   flex-wrap: wrap;
   padding-top: 50px;
-  margin-left: -30px;
-  margin-bottom: -30px;
+  /* margin-left: -30px;
+  margin-bottom: -30px; */
 }
 
 .portfolio-item {
-  margin-left: 30px;
+  margin-right: 30px;
   margin-bottom: 30px;
   background: #ffffff;
-  flex-basis: calc((100% - 30px * 3) / 3);
+  flex-basis: calc((100% - 60px) / 3);
 }
 
-.list-button {
-  display: flex;
-  justify-content: center;
-}
-
-.list-button-item {
-  margin-right: 8px;
-}
-
-.list-button-item:last-child {
+.portfolio-item:nth-child(3n) {
   margin-right: 0;
 }
+.portfolio-item:nth-last-child(-n + 3) {
+  margin-bottom: 0;
+}
 
-.footer-section .logo {
-  display: block;
-  margin-bottom: 20px;
+.portfolio-item:hover,
+.portfolio-item:focus {
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
