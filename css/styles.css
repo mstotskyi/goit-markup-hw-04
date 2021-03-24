@@ -204,6 +204,9 @@ img {
 }
 
 .hero .container {
+  text-align: center;
+  /* width: calc(100% / 12 * 5); */
+  max-width: 696px;
   padding-top: 200px;
   padding-bottom: 200px;
 }
@@ -214,6 +217,8 @@ img {
   font-size: 44px;
   line-height: 1.36;
   color: var(--main-title-color);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 .main-button {
