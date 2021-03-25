@@ -167,25 +167,12 @@ img {
   align-items: center;
 }
 
-.header-list-item .mail::before {
-  content: '';
+.header-list-item .icon {
+  fill: var(--main-text-color);
   margin-right: 10px;
-  width: 16px;
-  height: 12px;
-  background-image: url(../css/img/envelope.svg);
-  background-position: center;
-  background-repeat: no-repeat;
 }
-
-.header-list-item .phone::before {
-  content: '';
-  margin-right: 10px;
-
-  width: 10px;
-  height: 16px;
-  background-image: url(../css/img/smartphone.svg);
-  background-position: center;
-  background-repeat: no-repeat;
+.contact-link:hover .icon {
+  fill: var(--accent-text-color);
 }
 /* Герой */
 .hero {
@@ -291,16 +278,16 @@ img {
   border-radius: 4px;
 }
 .icon-antena::before {
-  background-image: url(../css/img/antenna_1.svg);
+  background-image: url(../css/img/antenna.svg);
 }
 .icon-clock::before {
-  background-image: url(../css/img/clock_1.svg);
+  background-image: url(../css/img/clock.svg);
 }
 .icon-diagram::before {
-  background-image: url(../css/img/diagram_1.svg);
+  background-image: url(../css/img/diagram.svg);
 }
 .icon-astronaut::before {
-  background-image: url(../css/img/astronaut_1.svg);
+  background-image: url(../css/img/astronaut.svg);
 }
 /* Чем мы занимаемся */
 .about-us {
@@ -333,7 +320,7 @@ img {
 .team-member {
   margin-left: 30px;
   width: 270px;
-  height: 368px;
+  height: 428px;
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -350,19 +337,56 @@ img {
   color: #212121;
 }
 
+.social-icons {
+  display: inline-flex;
+  padding-top: 16px;
+}
+
+.social-icons-item + .social-icons-item {
+  margin-left: 10px;
+}
+.social-icons-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--main-title-color);
+}
+
+.social-icons .icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--main-text-color);
+}
+
+.social-icons-link:hover,
+.social-icons-link:focus {
+  background-color: var(--accent-text-color);
+}
+
+.social-icons-link:hover .icon,
+.social-icons-link:focus .icon {
+  fill: var(--main-title-color);
+}
+
 /* Постоянные клиенты */
 .regular-customers .list {
   display: flex;
 }
-.regular-customers .list-item {
-  display: block;
+.regular-customers .customers-icons-link {
+  display: inline-flex;
+  align-items: center;
   margin-left: 30px;
   height: 90px;
+  max-width: 170px;
   border: 1px solid #afb1b8;
   box-sizing: border-box;
   border-radius: 4px;
   flex-basis: calc((100% - 150px) / 6);
 }
+
 /* Футер */
 .footer-section {
   background-color: var(--dark-bg-color);
@@ -403,51 +427,40 @@ img {
 }
 
 .social .list {
-  display: flex;
+  display: inline-flex;
 }
 
-.social .list-item {
+.social-list-item + .social-list-item {
   margin-left: 10px;
 }
-
 .social .link {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 44px;
   height: 44px;
   border-radius: 50%;
-
-  background-color: rgba(255, 255, 255, 0.1);
-  flex-basis: calc((100% - 30px) / 3);
-  background-repeat: no-repeat;
-  background-position: center;
+  background: rgba(255, 255, 255, 0.1);
 }
 
-.social .instagram {
-  background-image: url(../css/img/instagram_light.svg);
-}
-.social .twitter {
-  background-image: url(../css/img/twitter_light.svg);
+.social {
+  margin-left: 70px;
 }
 
-.social .facebook {
-  background-image: url(../css/img/facebook_light.svg);
+.social .icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--main-title-color);
 }
 
-.social .linkedin {
-  background-image: url(../css/img/linkedin_light.svg);
-}
-
-.social .link:focus,
-.social .link:hover {
+.social .link:hover,
+.social .link:focus {
   background-color: var(--accent-text-color);
 }
 
-.social-links {
-  display: block;
-  padding: 12px;
-}
-.social {
-  margin-left: 70px;
+.social .link:hover .icon,
+.social .link:focus .icon {
+  fill: var(--main-title-color);
 }
 
 /* Портфолио */
