@@ -8,6 +8,7 @@
   --logo-dark-color: #000000;
   --main-title-color: #ffffff;
   --light_bg-color: #f5f4fa;
+  --icon_color: #afb1b8;
 }
 
 html {
@@ -358,7 +359,7 @@ img {
 .social-icons .icon {
   width: 20px;
   height: 20px;
-  fill: var(--main-text-color);
+  fill: var(--icon_color);
 }
 
 .social-icons-link:hover,
@@ -386,10 +387,10 @@ img {
   justify-content: center;
   height: 90px;
   width: 170px;
-  border: 1px solid #afb1b8;
+  border: 1px solid var(--icon_color);
   box-sizing: border-box;
   border-radius: 4px;
-  fill: var(--main-text-color);
+  fill: var(--icon_color);
 }
 
 .customers-icons-link:hover,
@@ -473,11 +474,6 @@ img {
   background-color: var(--accent-text-color);
 }
 
-.social .link:hover .icon,
-.social .link:focus .icon {
-  fill: var(--main-title-color);
-}
-
 /* Портфолио */
 .filter {
   background-color: var(--filter-button-color);
@@ -532,8 +528,6 @@ img {
   display: flex;
   flex-wrap: wrap;
   padding-top: 50px;
-  /* margin-left: -30px;
-  margin-bottom: -30px; */
 }
 
 .portfolio-item {
