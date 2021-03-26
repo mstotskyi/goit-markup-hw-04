@@ -375,16 +375,31 @@ img {
 .regular-customers .list {
   display: flex;
 }
-.regular-customers .customers-icons-link {
+
+.customers-list-item + .customers-list-item {
+  margin-left: 30px;
+}
+
+.customers-icons-link {
   display: inline-flex;
   align-items: center;
-  margin-left: 30px;
+  justify-content: center;
   height: 90px;
-  max-width: 170px;
+  width: 170px;
   border: 1px solid #afb1b8;
   box-sizing: border-box;
   border-radius: 4px;
-  flex-basis: calc((100% - 150px) / 6);
+  fill: var(--main-text-color);
+}
+
+.customers-icons-link:hover,
+.customers-icons-link:focus {
+  border: 1px solid var(--accent-text-color);
+}
+
+.customers-icons-link:hover .icon,
+.customers-icons-link:focus .icon {
+  fill: var(--accent-text-color);
 }
 
 /* Футер */
